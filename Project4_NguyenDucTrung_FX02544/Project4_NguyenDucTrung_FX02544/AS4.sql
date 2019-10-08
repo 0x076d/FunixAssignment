@@ -1,0 +1,21 @@
+CREATE DATABASE AS4
+GO
+
+GO
+USE AS4
+
+CREATE TABLE Users
+(
+username VARCHAR(100),
+[password] VARCHAR(100),
+[role] INT
+)
+
+CREATE TABLE Article
+(
+ID int IDENTITY(1,1) PRIMARY KEY,
+Title NVARCHAR(MAX),
+Content NVARCHAR(MAX),
+[Time] DATETIME DEFAULT GETDATE(),
+[username] VARCHAR(100)
+)
